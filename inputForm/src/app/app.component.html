@@ -1,0 +1,30 @@
+
+<div class="content">
+  <h2>{{title}}</h2>
+
+
+  <div class="form">
+    <input [(ngModel)]="name" type="text" name="name" id="name" placeholder="name">
+    <input [(ngModel)]="age" type="number" name="age" id="age" placeholder="age">
+
+    <button (click)="SaveUser()" >Add User</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name: </th>
+        <th>Age: </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let item of users">
+        <td>{{item.name}}</td>
+        <td>{{item.age}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
