@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.mainBlock {
+    width: 1015px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputBlock {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}

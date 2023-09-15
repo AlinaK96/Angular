@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+
+@font-face {
+    font-weight: 700; /* Соответствует значению bold */
+    font-family: IBM Plex Sans;
+    src: url("./assets/fonts/IBMPlexSans-Bold.woff");
+}
+
+@font-face {
+    font-weight: 300; /* Соответствует значению bold */
+    font-family: Roboto;
+    src: url("./assets/fonts/Roboto-Light.woff");
+}
+
+@font-face {
+    font-weight: 700; /* Соответствует значению bold */
+    font-family: Roboto;
+    src: url("./assets/fonts/Roboto-Bold.woff");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+body {
+    line-height: normal;
+    font-weight: 700;
+    display: block;
+    box-sizing: border-box;
+    color: var(--gray);
+    font-family: "Roboto", sans-serif;
+}
+
+.defaultImg {
+    position: absolute;
+    top: 18px;
+    left: 16px;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    min-width: 1440px;
+    color: var(--main-font);
+    background: var(--main-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+
+:root{
+    --text :#1E2022;
+    --hint: #ACACAC;
+    --background-main:#FDFCF3;
+    --background: linear-gradient(137deg, #FFF76A 31.13%, #FFCE89 100%);
+}
