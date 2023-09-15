@@ -21,23 +21,13 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
-}
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+    padding: 0
 }
 
 body {
     line-height: normal;
     font-weight: 700;
+    padding: 40px;
     display: block;
     box-sizing: border-box;
     color: var(--gray);
@@ -50,19 +40,6 @@ body {
     left: 16px;
 }
 
-.container {
-    height: 100vh;
-    width: 100%;
-    min-width: 1440px;
-    color: var(--main-font);
-    background: var(--main-background);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 40px;
-    padding-right: 40px;
-    padding-left: 40px;
-}
 
 
 :root{
