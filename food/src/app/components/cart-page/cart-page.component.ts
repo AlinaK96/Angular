@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart/cart.service';
 import { Cart } from 'src/app/shared/models/Cart';
 import { CartItem } from 'src/app/shared/models/CartItem';
@@ -15,6 +16,7 @@ export class CartPageComponent {
 
   constructor (
     private cartService: CartService,
+    private router: Router
   ){
     this.setCart()
   }
@@ -32,5 +34,9 @@ export class CartPageComponent {
     const quantity = parseInt(quantityInString)
     this.cartService.changeQuantity(cartItem.food.id, quantity)
     this.setCart()
+  }
+
+  goToCatalog(){
+    this.router.navigateByUrl('')
   }
 }

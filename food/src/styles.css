@@ -26,3 +26,7 @@ li{
     --primary: #e72929;
     --secondary: #af1313;
 }
+
+a:visited{
+    color: black;
+}
