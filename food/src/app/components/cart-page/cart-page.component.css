@@ -103,38 +103,3 @@ ul .remove-button:hover{
     content: 'Price: ';
     color: var(--secondary);
 }
-
-.empty-cart{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.empty-cart p{
-    font-weight: bold;
-    padding: 1em;
-    font-size: 2em;
-    color: var(--primary);
-}
-
-.empty-cart button{
-    background-color: transparent;
-    border: 1px solid var(--primary);
-    outline: none;
-    font-size: 18px;
-    padding: 15px;
-    border-radius: 20px;
-    color: var(--primary);
-    cursor: pointer;
-}
-
-.empty-cart button:hover{
-    background-color: var(--primary);
-    color: white;
-    transition: .3s;
-}
-
-.empty-cart button:not(:hover){
-    transition: .3s;
-
-}

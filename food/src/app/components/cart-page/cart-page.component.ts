@@ -36,7 +36,4 @@ export class CartPageComponent {
     this.setCart()
   }
 
-  goToCatalog(){
-    this.router.navigateByUrl('')
-  }
 }

@@ -1,5 +1,9 @@
-<div class="container" *ngIf="cart.items.length !== 0">
+<app-not-found [visible]="!cart || cart.items.length <= 0"
+notFoundMessage="Cart is empty"
+resetLinkText="Start shopping"
+></app-not-found>
 
+<div class="container" *ngIf=" cart && cart.items.length > 0">
     <ul>
         <li *ngFor=" let cartItem of cart.items">
             <div>
@@ -45,8 +49,3 @@
     
 
 </div>
-
-    <div *ngIf="cart.items.length == 0" class="empty-cart">
-        <p>Cart is empty</p>
-        <button (click)="goToCatalog()">Start shopping</button>
-    </div>
