@@ -1,6 +1,28 @@
 <div class="card">
-    <h2>{{title}}</h2>
-    <p>{{text}}</p>
+    <h2 [ngStyle]="{    
+        color: title.length < 5? 'blue' : 'green',
+        fontWeight: title.length > 5? 'bold' : 'normal'
+    }">
+    {{title}}
+    </h2>
+
+    <!-- <p class="text" [ngClass]="{
+        blue: textColor === 'blue',
+        yellow: textColor === 'yellow',
+        purple: textColor === 'purple'
+    }">{{text}}</p> -->
+    <p class="text" 
+        [class.blue]="textColor === 'blue'"
+        [class.yellow]="textColor === 'yellow'"
+        [class.purple]="textColor === 'purple'"
+    >{{text}}</p>
+    <div class="buttons">
+        <button (click)="textColor = 'blue'">Set blue</button>
+        <button (click)="textColor = 'yellow'" >Set yellow</button>
+        <button (click)="textColor = 'purple'">Set purple</button>
+        <button (click)="textColor = ''">Set default</button>
+    </div>
+
     <div><img [src]="imgUrl" alt="Упс.."></div>
     <span><strong>Card id: {{id}}</strong></span>
 
@@ -9,8 +31,12 @@
         <button [disabled]="disabled" (click)="text = 'updated text'" >Change text</button>
     </div>
 
-    <div>
+    <!-- <div>
         <input type="text" placeholder="new title" (input)="inputHandler($event)" [value]="title">
         <input type="text" #myInput placeholder="new title" (input)="inputHandler2(myInput.value)" [value]="title">
+    </div> -->
+
+    <div>
+        <input type="text" [(ngModel)]="title" (ngModelChange)="ChangeHandler()">
     </div>
 </div>
