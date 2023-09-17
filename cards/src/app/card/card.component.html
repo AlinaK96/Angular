@@ -1,4 +1,16 @@
 <div class="card">
-    <h2>Заголовок</h2>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, amet.</p>
+    <h2>{{title}}</h2>
+    <p>{{text}}</p>
+    <div><img [src]="imgUrl" alt="Упс.."></div>
+    <span><strong>Card id: {{id}}</strong></span>
+
+    <div class="buttons">
+        <button [disabled]="disabled" (click)="changeTitle()" >Change title</button>
+        <button [disabled]="disabled" (click)="text = 'updated text'" >Change text</button>
+    </div>
+
+    <div>
+        <input type="text" placeholder="new title" (input)="inputHandler($event)" [value]="title">
+        <input type="text" #myInput placeholder="new title" (input)="inputHandler2(myInput.value)" [value]="title">
+    </div>
 </div>
