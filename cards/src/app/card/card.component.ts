@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ICard } from '../app.component';
 
 @Component({
     selector: 'app-card',
@@ -8,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class CardComponent implements OnInit {
+
+    @Input()
+    card!: ICard;
 
     title: string = 'Card title'
     text: string = 'Sample text'
@@ -24,17 +28,17 @@ export class CardComponent implements OnInit {
     }
 
     changeTitle() {
-        this.title = 'New title'
+        this.card.title = 'New title'
     }
 
     ChangeHandler() {
-        console.log(this.title);
+        console.log(this.card.title);
     }
     // inputHandler(event: any){
-    //     this.title = (event.target.value);
+    //     this.card.title = (event.target.value);
     // }
 
     // inputHandler2(value: any){
-    //     this.title = (value);
+    //     this.card.title = (value);
     // }
 }

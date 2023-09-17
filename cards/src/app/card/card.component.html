@@ -1,9 +1,9 @@
 <div class="card">
     <h2 [ngStyle]="{    
-        color: title.length < 5? 'blue' : 'green',
-        fontWeight: title.length > 5? 'bold' : 'normal'
+        color: card.title.length < 5? 'blue' : 'green',
+        fontWeight: card.title.length > 5? 'bold' : 'normal'
     }">
-    {{title}}
+    {{card.title}}
     </h2>
 
     <!-- <p class="text" [ngClass]="{
@@ -15,7 +15,7 @@
         [class.blue]="textColor === 'blue'"
         [class.yellow]="textColor === 'yellow'"
         [class.purple]="textColor === 'purple'"
-    >{{text}}</p>
+    >{{card.text}}</p>
     <div class="buttons">
         <button (click)="textColor = 'blue'">Set blue</button>
         <button (click)="textColor = 'yellow'" >Set yellow</button>
@@ -24,11 +24,11 @@
     </div>
 
     <div><img [src]="imgUrl" alt="Упс.."></div>
-    <span><strong>Card id: {{id}}</strong></span>
+    <span><strong>Card id: {{card.id}}</strong></span>
 
     <div class="buttons">
         <button [disabled]="disabled" (click)="changeTitle()" >Change title</button>
-        <button [disabled]="disabled" (click)="text = 'updated text'" >Change text</button>
+        <button [disabled]="disabled" (click)="card.text = 'updated text'" >Change text</button>
     </div>
 
     <!-- <div>
@@ -37,6 +37,6 @@
     </div> -->
 
     <div>
-        <input type="text" [(ngModel)]="title" (ngModelChange)="ChangeHandler()">
+        <input type="text" [(ngModel)]="card.title" (ngModelChange)="ChangeHandler()">
     </div>
 </div>
