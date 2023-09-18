@@ -3,7 +3,6 @@
   <hr>
   <button (click)="toggleCards()">Cards toggle</button>
   <hr>
-  <!-- <app-form></app-form> -->
   <div *ngIf="toggle; else noCards">
     <app-card *ngFor=" let card of cards"
     [card]="card"
@@ -14,5 +13,9 @@
   <ng-template #noCards>
     <p>Cards are hidden</p>
   </ng-template>
+
+  <hr>
+  <hr>  
+  <app-form></app-form>
 
 </div>

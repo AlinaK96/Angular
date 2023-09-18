@@ -1,1 +1,11 @@
-<p>form works!</p>
+<ul>
+    <li *ngFor=" let item of todoService.todos; let i = index">
+        <span [class.done]="item.completed">
+            <input type="checkbox" [checked]="item.completed" (change)="onChange(item.id)">
+            <strong>{{i +1}}.</strong>
+            {{item.title}}
+        </span>
+        <small>{{item.date | date}}</small>
+        <button class="rm" (click)="remove(item.id)">x</button>
+    </li>
+</ul>

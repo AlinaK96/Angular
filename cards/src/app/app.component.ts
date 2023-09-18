@@ -12,7 +12,7 @@ export interface ICard{
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  toggle:boolean = true
+  toggle:boolean = false
   title = 'Cards';
 
   cards: ICard[] = [
