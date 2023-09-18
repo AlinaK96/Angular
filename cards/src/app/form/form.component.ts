@@ -16,7 +16,7 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.todoService.fetchTodos()
-      .pipe(delay(2000))
+      .pipe(delay(500))
       .subscribe(() => {
         this.loading = false
     })

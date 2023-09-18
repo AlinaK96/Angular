@@ -35,4 +35,7 @@ export class TodoService {
         this.todos = this.todos.filter( t => t.id !== id)
     }
 
+    addToDo(todo: ITodo){
+        this.todos.push(todo)
+    }
 }
