@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-
+import {HttpClient} from '@angular/common/http'
+import { Observable, tap } from 'rxjs';
 
 export interface ITodo{
     id: number,
@@ -13,11 +14,16 @@ export interface ITodo{
 })
 
 export class TodoService {
-    public todos: ITodo[] =[
-        {id: 1, title: "Купить хлеб", completed: true, date: new Date()},
-        {id: 2, title: "Купить масло", completed: false, date: new Date()},
-        {id: 3, title: "Купить яблоки", completed: true, date: new Date()},
-    ]
+    public todos: ITodo[] =[]
+
+    constructor (
+        private http: HttpClient
+    ){}
+
+    fetchTodos(): Observable<ITodo[]>{
+        return this.http.get<ITodo[]>('https://jsonplaceholder.typicode.com/todos')
+        .pipe(tap( todos => this.todos = todos ))
+    }
 
     onChange(id: number) {
         const index = this.todos.findIndex( t => t.id === id)
